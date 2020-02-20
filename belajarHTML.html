@@ -1,0 +1,220 @@
+</!DOCTYPE html>
+<html>
+<head><!-- meta information, buat title, scripting, dll -->
+	<title>Belajar HTML gaes</title> <!-- buat title yg di tab -->
+	<!-- CSS internal -->
+	<style type="text/css">
+		h4 {color: blue;}
+	</style>
+
+	<!-- CSS eksternal -->
+	<link rel="stylesheet" type="text/css" href="myCss.css">
+</head>
+
+<body><!-- page content, memunculkan semua konten yang muncul pada suatu halaman -->
+	<h1>Headings 1</h1><!-- buat bikin tulisan di body -->
+	<h2>Headings 2</h2>
+	<h3>Headings 3</h3>
+	<h4>Headings 4</h4>
+	<h5>Headings 5</h5>
+	<h6>Headings 6</h6>
+	<hr><!-- buat bikin garis -->
+
+	<h4>Image</h4><!-- elemen -->
+	<img src="tf.png" alt="harusnya gambar jokowi" style="width: 75%; height: 75%"><!-- atribut --> <!-- yg alt itu buat kata2 kalo gambarnya ga muncul --> <!-- CSS nya inline -->
+	<hr><!-- buat bikin garis -->
+
+	<h4>Paragraph</h4>
+	<p>Ini adalah paragraph 1</p>
+	<p>Ini adalah paragraph 2</p>
+	<hr><!-- buat bikin garis -->
+
+	<h4>Format Text</h4>
+	<b>Bold</b>
+	<br><!-- buat break -->
+	<strong>Strong</strong>
+	<i>Italic</i>
+	<small>Small</small>
+	<mark>Mark</mark>
+	<em>Emphasize</em>
+	<br><!-- buat break -->
+	<del>Deleted Text</del>
+	<ins>Inserted Text</ins>
+	Kata-kata<sub>Sub</sub>
+	Kata-kata<sup>Sup</sup>
+	<hr><!-- buat bikin garis -->
+
+	<h4>Tabel</h4>
+	<table border="1" style="padding-top: 5px; padding-left: 1px; border-spacing: 2px; width: 75%"; bgcolor=#E9967A ><!-- tr td th cuma berfungsi kalo didalem table -->
+		<thead><!-- buat judul -->
+			<tr bgcolor=#DAF7A6><!-- table row -->
+				<th colspan="3">Kolom</th> <!-- table head, biasanya buat judul -->
+				<th colspan="3">Kolom</th>
+<!-- 				<th>Kolom</th>
+				<th>Kolom</th>
+				<th>Kolom</th>
+				<th>Kolom</th> -->
+			</tr>
+			<!-- colspan gabungin kolom -->
+			<!-- rowspan gabungin baris -->
+		</thead>
+		<tbody><!-- buat data -->
+			<tr>
+				<td rowspan="2">Data</td><!-- table data -->
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td><!-- table data -->
+				<td>Data</td>
+				<td>Data</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>Data</td><!-- table data -->
+				<td rowspan="2">Data</td>
+				<td>Data</td>
+				<td>Data</td><!-- table data -->
+				<td>Data</td>
+				<!-- <td>Data</td> -->
+			</tr>
+			<tr style="text-align: right; ">
+				<td>Data</td><!-- table data -->
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td><!-- table data -->
+				<td>Data</td>
+				<!-- <td>Data</td> -->
+			</tr>
+		</tbody>
+		<tfoot><!-- jarang dipake -->
+			<tr><!-- table row -->
+				<th>Kolom</th> <!-- table head, biasanya buat judul -->
+				<th>Kolom</th>
+				<th>Kolom</th>
+			</tr>
+		</tfoot>
+	
+	</table>
+	<hr>
+
+	<h4>List</h4>
+	kebagi 2, ordered list (ol) dan unorder list (ul)
+	<ol type="i" start="3"> <!-- biasanya mulai dr 1 jd apus aja starnya -->
+		<li>Satu</li>
+		<li>Dua</li>
+		<li>Tiga</li>
+		<li>Empat</li>
+	</ol>
+	<ul type="square">
+		<li>Satu</li>
+		<li>Dua</li>
+		<li>Tiga</li>
+		<li>Empat</li>
+	</ul>
+	<hr>
+
+	<div style="text-align: center;"><!-- buat ngedefinisiin -->
+		
+	<h4>Inputan</h4>
+	<table style="width: 50%; "border= "2">
+		<tr style="text-align: center; font-weight: bold">
+			<td>Nama</td>
+			<td>Kosong</td>
+			<td>Isi</td>
+		</tr>
+		<tr>
+			<td>Input type text</td>
+			<td><input type="text"></td>
+			<td><input type="text" value="Mutia"></td>
+		</tr>
+		<tr>
+			<td>Input type number</td>
+			<td><input type="number"></td>
+			<td><input type="number" value="3"></td>
+		</tr>
+		<tr>
+			<td>Input type date</td>
+			<td><input type="date"></td>
+			<td><input type="date" value="11/02/2019"></td>
+		</tr>
+		<tr>
+			<td>Input type radio</td>
+			<td><input type="radio"></td>
+			<td><input type="radio" checked="checked"></td>
+		</tr>
+		<tr>
+			<td>Input type checkbox</td>
+			<td><input type="checkbox"></td>
+			<td><input type="checkbox" checked="checked"></td>
+		</tr>
+		<tr>
+			<td>Input type submit</td>
+			<td><input type="submit"></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Input type button</td>
+			<td><input type="button"></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Input type reser</td>
+			<td><input type="reset"></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Select option</td>
+			<td>
+				<select>
+					<option>--Pilih--</option>
+					<option>Jakarta</option>
+					<option>Bandung</option>
+					<option>Surabaya</option>
+					<option>Yogyakarta</option>
+				</select>
+			</td>
+			<td>
+				<select>
+					<option>--Pilih--</option>
+					<option selected="Jakarta">Jakarta</option>
+					<option>Bandung</option>
+					<option>Surabaya</option>
+					<option>Yogyakarta</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>button button</td>
+			<td><button type="button">button</button>
+			<td>-</td>
+			</td>
+		</tr>
+		<tr>
+			<td>button submit</td>
+			<td><button type="submit">submit</button>
+			</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>button reset</td>
+			<td><button type="reset">reset</button>
+			</td>
+			<td>-</td>
+		</tr>
+	</table>
+	</div>
+	<hr>
+
+	<h4>Link</h4>
+	<a href="pindahHalaman.html">Pindah halaman</a>
+	<a href="pindahTab.html" target="_blank">Pindah tab</a>
+<!--
+	<input type="text">
+	<input type="number">
+	<input type="date">
+	<input type="radio">
+	<input type="checkbox">
+	<input type="submit"> misal buat jalanin form di facebook pas daftar, cuma bisa pake submit
+	<input type="button" value="tombol">
+	<input type="reset"> -->
+	
+</body>
+</html>

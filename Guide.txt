@@ -1,0 +1,104 @@
+__________________________________________________________________________________________________________
+BOOTSTRAP
+__________________________________________________________________________________________________________
+getbootstrap.com > documentation > CSS (copy paste link didalem <head>)
+
+contoh :
+<table class="table table-striped table-hover">
+<button class="btn btn-primary">A</button>
+
+variasi button bootstrap : https://getbootstrap.com/docs/4.4/components/buttons/
+
+__________________________________________________________________________________________________________
+FONT AWESOME
+__________________________________________________________________________________________________________
+https://www.bootstrapcdn.com/fontawesome/ > HTML (copy ke <head>)
+
+contoh : <button class="btn btn-primary"><i class="fa fa-plus"></i> A</button>
+(nambah simbol didalem button)
+
+__________________________________________________________________________________________________________
+DATATABLES
+__________________________________________________________________________________________________________
+https://datatables.net/ > copy link CSS JS (taro di <head> yg CSS, taro di setelah </body> yg JS)
+https://datatables.net/ > copy single function (taro didalem <script> dibawah>
+
+__________________________________________________________________________________________________________
+CARA PAKE BOOTSTRAP/ FONT AWESOME/ DATATABLES DOWNLOAD-AN
+__________________________________________________________________________________________________________
+https://getbootstrap.com/ > download > (compiled CSS and JS) download > ekstrak > move to htdocs/htmlTDP04
+https://fontawesome.com/ > download > free for web > ekstrak > move to htdocs/htmlTDP04
+https://datatables.net/ > download > (step 3) download  > download files  > ekstrak > move to htdocs/htmlTDP04
+https://jquery.com/ > download jquery v.3.4.1> download the compressed, production jquery 3.4.1 > ekstrak > move to htdocs/htmlTDP04
+
+lalu panggil file nya
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
+
+<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
+
+<button class="btn btn-primary"><i class="fas fa-plus"></i> A</button>
+
+__________________________________________________________________________________________________________
+HTML COLOR CODE
+__________________________________________________________________________________________________________
+https://www.computerhope.com/htmcolor.htm
+https://htmlcolorcodes.com/
+
+__________________________________________________________________________________________________________
+MODAL
+__________________________________________________________________________________________________________
+(front end)
+getbootstrap.com > documentation > search modal > example > live demo (copy code ke body dibawah table)
+
+(back end)
+getbootstrap.com > documentation > introduction > JS (copy link terakhir ke setelah body)
+code.jquery.com > jQuery 3.x > minified (copy ke setelah body sebelum link bootstrap modal)
+
+__________________________________________________________________________________________________________
+CARA CEK HTTP STATUS
+__________________________________________________________________________________________________________
+Buka page yg dimaksud > klik kanan > inspect > network (trus cek yg mana yg mau dicek, yg bagus 200)
+
+__________________________________________________________________________________________________________
+SQL SERVER
+__________________________________________________________________________________________________________
+instal, tp seharusnya masukin passwordpas instalasi
+kalo udah, pilih sql express
+connect
+
+http://www.sqlservertutorial.net/ > (getting started) sql server sample database 
+> download sql server sample database > ekstrak > open yg bikestores create & bikestores load
+
+(sumber : http://www.sqlservertutorial.net/load-sample-database/)
+buka sql server management studio > (object explorer) klik kanan di database > new database > kasih nama BikeStores
+di form bikestores create object, (available database) ubah master jd bikestores, trus F5 (succes)
+di form bikestores load data, (available database) ubah master jd bikestores, trus F5 (succes)
+(object explorer) klik kanan di tables > refresh (nanti nambah 9 table)
+(object explorer) klik kanan di bikestores > new query (lgsg otomatis terpilih database bikestores)
+
+__________________________________________________________________________________________________________
+SUBLIME SHORTCUT
+__________________________________________________________________________________________________________
+Ctrl + Shift + PgUp (mindahin line code ke atas)
+Ctrl + Shift + PgDn (mindahin line code ke bawah)
+Ctrl + Shift + End (drag code)
+Ctrl + Shift + Home (drag code)
+
+Ctrl + Shift + / (comment)
+Ctrl + Shift + D (duplicate lines)
+
+Fn + Tab (tab multiple lines)
+Fn + Shift + Tab (delete tab multiple lines)
+drag, Ctrl + D (type multiple line)
+
+__________________________________________________________________________________________________________
+LINK BELAJAR
+__________________________________________________________________________________________________________
+https://www.tutorialsteacher.com/
+http://sqlzoo.net/
+http://www.sqlservertutorial.net/
+https://www.techonthenet.com/

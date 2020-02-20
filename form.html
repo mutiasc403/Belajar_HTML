@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+<h1>Form</h1>
+<form action="menu.html" method="POST"> <!-- yg terpenting name, krn kalo diilangin nanti ga kekirim di post atau get -->
+	<table>
+		<tr>
+			<td>Nama</td>
+			<td><input type="text" name="nama"></td>
+		</tr>
+		<tr>
+			<td>Alamat</td>
+			<td>
+				<select name="alamat">
+					<option>--Pilih--</option>
+					<option value="Bandung">Bandung</option>
+					<option value="Jakarta">Jakarta</option>
+					<option value="Surabaya">Surabaya</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><button type="Submit">Proses</button></td>
+			<td><button type="Reset">Reset</button></td>	
+		</tr>
+	</table>
+</form>
+</body>
+</html>

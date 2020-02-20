@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popup</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<style type="text/css">
+		#modal-kotak{
+			margin: 5% 30% 30% 30%;
+			width: 500px;
+			height: 200px;
+			position: absolute;
+			position: fixed;
+			z-index: 1002;
+			display: none; /*kalo block buat munculin*/
+			background: white;
+		}
+
+		#atas{
+			font-size: 15pt;
+			padding: 20px;
+			height: 80%;
+		}
+
+		#bawah{
+			background: #fff;
+		}
+
+		#tombol-tutup{
+			background: #e74c3c;
+			height: 30px;
+			width: 100px;
+			color: #fff;
+			border: 0px;
+		}
+
+		#bg{
+			opacity: .80;
+			position: absolute;
+			display: none;
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			z-index: 1001;
+			opacity: 0.8;
+		}
+
+		.box{
+			height: 150px;
+			width: 150px;
+			background: orange;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Pop-up</h1>
+	<button id="tombol_popup">Klik saya (popup)!</button>
+		Klik tombol untuk menampilkan modal dialog
+	<hr>
+		
+	<button id="tombol">Klik</button>
+	<div class="box"></div>
+
+	<div id="bg"></div>
+	<div id="modal-kotak">
+		<div id="atas">
+			Halo. Ini adalah modal dialog
+		</div>
+		<div id="bawah">
+			<button id="tombol-tutup">CLOSE</button>
+		</div>
+	</div>
+	<hr>
+	<!-- Button trigger modal -->
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-backdrop='static' data-keyboard="false"> -->
+	<button id="btsModal" type="button" class="btn btn-primary"> 
+  	Launch demo modal
+	</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tombol_popup').click(function(){
+			$('#modal-kotak, #bg').fadeIn("slow");
+		})
+		/*contoh animasi : 
+		toggle, toggleFade
+		slide up, slide down
+		fade in, fade out*/
+		$('#tombol-tutup').click(function (){
+			$('#modal-kotak, #bg').fadeOut("slow");
+		})
+		$('#tombol').click(function(){
+			$(".box").fadeOut(5000).slideDown(5000).fadeToggle(5000);
+		})
+
+		//nampilin popup (modal) dengan script
+		$("#btsModal").click(function(){
+			$('#exampleModal').modal({backdrop:'static', keyboard:false});
+			//$('#exampleModal').modal("show");
+		})
+	});
+</script>
+</html>

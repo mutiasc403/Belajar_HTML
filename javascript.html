@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script</title>
+</head>
+<body>
+	<h1>Java Script</h1>
+	<style type="text/css">
+		/*div{border : 2px solid red}*/
+		.lingkaran{
+			border-radius: 100%;
+			width: 200px;
+			height: 200px;
+			background: orange;
+			padding: 30px;
+			color: #fff;
+			margin-top: 20px;
+		}
+		.loader{
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			z-index: 1;
+			width: 150px;
+			height: 150px;
+			margin: -75px 0 0 -75px;
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #3498db;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+			/*display: none;*/
+		}
+		@-webkit-keyframes spin{
+			0% {-webkit-transform: rotate(0deg);}
+			100% {-webkit-transform: rotate(360deg);}
+		}
+
+		@keyframes spin{
+			0% {-webkit-transform: rotate(0deg);}
+			100% {-webkit-transform: rotate(360deg);}
+		}
+		.overlay{
+			background: #000000;
+			opacity: 0.5;
+			bottom: 0;
+			left: 0;
+			position: fixed;
+			right: 0;
+			top: 0;
+			z-index: 10000;
+		}
+		.popup{
+			background: url(loading2.gif) no-repeat scroll center center #FFF;
+			opacity: 0.7;
+			width: 300px;
+			height: 300px;
+			position: fixed;
+			text-align: center;
+			top: 28%;
+			left: 40%;
+			z-index: 20000;
+			border-radius: 45px;
+		}
+	</style>
+	<input type="text" name="nama" id="nama" value="Mutia Shafira">
+
+	<br>
+
+	<button id="after">Test After</button>
+	<button id="before">Test Before</button>
+	<button id="prepend">Test Prepend</button>
+	<button id="append">Test Append</button>
+	<button id="campur">Test Campur</button>
+	<div class="kotak">
+		<span>ISI KOTAK</span>
+	</div>
+
+	<br>
+	<div class="lingkaran"></div>
+	<button id="biru">biru</button>
+	<button id="hijau">hijau</button>
+	<button id="pink">pink</button>
+	<button id="kuning">kuning</button>
+
+	<br>
+	<input type="text" id="inputsatu">
+	<input type="text" id="inputdua">
+
+	<br>
+	<input type="text" id="inputtiga">
+	<input type="text" id="inputempat">
+
+	<input type="text" id="hobi" value="olahRaga">
+
+	<table id="myTable" border="1" style="width: 100%">
+		<tr>
+			<td>Mutia Shafira</td>
+			<td>Jakarta</td>
+			<td>28 September 1998</td>
+		</tr>
+	</table>
+
+	<button id="tambahBaris">Tambah baris</button>
+
+	<!-- <div class="loader"></div> -->
+	<div class="popup" style="display: none;"></div>
+	<div class="overlay" style="display: none;"></div>
+
+</body>
+<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*mama();*/
+
+		//var nama = $("#nama").val("Ceritanya berubah gaes");
+
+		//var nama = document.getElementById("nama").value;
+		//alert(nama);
+		
+		//titik itu buat manggil class
+
+		//after, nampilin setelah div
+		$('#after').click(function(){
+			$('.kotak').after("<h4>contoh after</h4>");
+		})
+		//before, nampilin sebelum div
+		$('#before').click(function(){
+			$('.kotak').before("<h4>contoh before</h4>");
+		})
+		//prepend, nampilin didalem div awal
+		$('#prepend').click(function(){
+			$('.kotak').prepend("<h4>contoh prepend</h4>");
+		})
+		//append, nampilin didalem div akhir
+		$('#append').click(function(){
+			$('.kotak').append("<h4>contoh append</h4>");
+		})
+
+		$('#campur').click(function(){
+			campur();
+		})
+
+		//sekali klik
+		$('#biru').click(function(){
+			$('.lingkaran').css("background", "blue")
+		})
+
+		//pas ga kena mouse
+		$('#hijau').mouseout(function(){
+			$('.lingkaran').css("background", "green")
+		})
+
+		//double click
+		$('#pink').dblclick(function(){
+			$('.lingkaran').css("background", "pink")
+		})
+
+		//pas kena mouse
+		$('#kuning').mouseover(function(){
+			$('.lingkaran').css("background", "yellow")
+		})
+
+		//copy ke inputdua pas di enter atau click diluar
+		$('#inputsatu').change(function(){
+			var val_satu = $("#inputsatu").val();
+			$("#inputdua").val(val_satu)
+		})	
+
+		//copy barengan ke sebelahnya	
+		/*$('#inputtiga').keyup(function(){
+			var val_satu = $("#inputtiga").val();
+			$("#inputempat").val(val_satu)
+		})*/
+
+		//copy barengan ke sebelahnya #2
+		$('#inputtiga').on("keyup",function(){
+			var val_satu = $("#inputtiga").val();
+			$("#inputempat").val(val_satu)
+		})
+
+		$('#tambahBaris').click(function(){
+			var h = $("#hobi").val();
+			$.ajax({
+				url:"tambahBaris.html",
+				method: "POST",
+				data:{'nama':h},
+				// data:{},
+				beforeSend:function(){
+					$(".overlay").show();
+					$(".popup").show();
+				},
+				success:function(data){
+					/*$("#myTable").append(data);*/
+					/*$(".overlay").hide();
+					$(".popup").hide();*/
+
+					setTimeout(function(){
+						$("#myTable").append(data);
+						$(".overlay").hide();
+						$(".popup").hide();
+					}, 1000);
+				}
+			})
+		})
+
+	});
+
+	function mama(){
+		alert("Mama cantik!");
+	}
+
+	function campur(){
+		$('.kotak').after("<h4>contoh after</h4>");
+		$('.kotak').before("<h4>contoh before</h4>");
+		$('.kotak').prepend("<h4>contoh prepend</h4>");
+		$('.kotak').append("<h4>contoh append</h4>");
+	}
+</script>
+</html>
+
+<!-- sebelum pake js, jgn lupa load jquery -->
+<!-- # buat id, titik buat class -->
+<!-- pake ajax pas ada kata ajax, yg penting url, method, success (sisanya optional) -->
+<!-- event : click, dblclick, mouseout, mouseover, dll -->
+<!-- css ada 3 : inline, internal, eksternal -->

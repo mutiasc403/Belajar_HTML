@@ -1,0 +1,8 @@
+h1 {color: red;}
+
+p /*yang mau diubah*/
+{	
+	color: green; /*warna*/
+	font-family: verdana; /*nama font*/
+	font-size: 12px; /*ukuran pake pixel*/
+}

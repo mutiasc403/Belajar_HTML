@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Load CS JSS</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
+</head>
+<body>
+	<div class="container"> <!-- biar ga nempel sama pinggir -->
+		<div style="text-align: center">
+			<h1>Bootstrap, Font Awesome, JQuery, Data Table</h1>
+		</div>
+		<hr>
+
+		<table class="table table-striped table-hover" id="myTable">
+			<thead>
+				<tr>
+					<th>Nama</th>
+					<th>Tanggal Lahir</th>
+					<th>Alamat</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Mutia Shafira</td>
+					<td>28 September 1998</td>
+					<td>Jakarta</td>
+				</tr>
+				<tr>
+					<td>Ihsan</td>
+					<td>1 Januari 1998</td>
+					<td>Bandung</td>
+				</tr>
+				<tr>
+					<td>Rizki</td>
+					<td>2 Februari 1998</td>
+					<td>Semarang</td>
+				</tr>
+				<tr>
+					<td>Afni</td>
+					<td>3 Maret 1998</td>
+					<td>Yogyakarta</td>
+				</tr>
+				<tr>
+					<td>Ratna</td>
+					<td>4 April 1998</td>
+					<td>Solo</td>
+				</tr>
+				<tr>
+					<td>Nafi</td>
+					<td>5 Mei 1998</td>
+					<td>Bogor</td>
+				</tr>
+				<tr>
+					<td>Asep</td>
+					<td>6 Juni 1998</td>
+					<td>Jakarta</td>
+				</tr>
+			</tbody>
+			<!-- <tr>
+				<td>Kolom</td>
+				<td>Kolom</td>
+				<td>Kolom</td>
+			</tr>
+			<tr>
+				<td>Kolom</td>
+				<td>Kolom</td>
+				<td>Kolom</td>
+			</tr>
+			<tr>
+				<td>Kolom</td>
+				<td>Kolom</td>
+				<td>Kolom</td>
+			</tr>
+			<tr>
+				<td>Kolom</td>
+				<td>Kolom</td>
+				<td>Kolom</td>
+			</tr> -->
+		</table>
+		<hr>
+	</div>
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+
+	        <!-- isi dari modal nya -->
+	        <!-- https://getbootstrap.com/docs/4.4/components/forms/ -->
+	        <form>
+			  <div class="form-group">
+			    <label for="exampleFormControlInput1">Email address</label>
+			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlSelect1">Example select</label>
+			    <select class="form-control" id="exampleFormControlSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlSelect2">Example multiple select</label>
+			    <select multiple class="form-control" id="exampleFormControlSelect2">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlTextarea1">Example textarea</label>
+			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			  </div>
+			</form>
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+
+	<!-- https://getbootstrap.com/docs/4.4/components/buttons/ -->
+	<button class="btn btn-primary"><i class="fas fa-plus"></i> A</button>
+	<button class="btn btn-info"><i class="fas fa-search"></i> B</button>
+	<button class="btn btn-danger"><i class="fas fa-pencil-alt"></i> C</button>
+	<button class="btn btn-warning"><i class="fas fa-trash"></i> D</button>
+</body>
+<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="datatables/datatables.min.js"></script>
+<script type="text/javascript">
+	$(document).ready( function () 
+	{
+    	$('#myTable').DataTable({
+    		/*kalo mau nambah dom (data object manipulation)*/
+    		//"dom": 'lrtip', "searching":false /*kalo p (page) diilangin jd ilang*/
+    	});/*id lambang #, class lambang .*/
+	} );
+</script>
+</html>
